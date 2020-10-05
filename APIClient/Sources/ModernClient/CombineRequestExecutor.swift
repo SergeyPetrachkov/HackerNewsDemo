@@ -6,9 +6,11 @@
 //
 
 import Foundation
+import Entities
+import NetworkingCore
 import Combine
 
-@available(OSX 10.15, *)
+@available(iOS 13.0, *)
 public class CombineRequestExecutor {
 
 	private let urlSession: URLSession

@@ -1,23 +1,6 @@
 import NetworkingCore
+import Entities
 import Foundation
-
-extension APIEndpoint {
-  static var basePath: String {
-    "https://hacker-news.firebaseio.com/v0/"
-  }
-
-  static func jobs() -> APIEndpoint {
-    return .init(path: basePath + "jobstories.json?print=pretty", method: .get)
-  }
-
-  static func post(id: Int) -> APIEndpoint {
-    return .init(path: basePath + "item/\(id).json?print=pretty", method: .get)
-  }
-
-  static func user(id: String) -> APIEndpoint {
-	return .init(path: basePath + "user/\(id).json?print=pretty")
-  }
-}
 
 public enum API {
 
@@ -54,24 +37,4 @@ public enum FlatAPI {
   public static func getUserDetails(id: String) throws -> User {
 	return try Networking.requestData(id, functor: API.userDetails)
   }
-}
-
-import Combine
-@available(OSX 10.15, *)
-public enum CombineAPI {
-
-	static let provider = CombineRequestExecutor(session: URLSession.shared)
-	static let decoder = JSONDecoder()
-
-	public static func getJobs() -> AnyPublisher<[Int], Error> {
-		self.provider.run(.jobs(), decoder: decoder).eraseToAnyPublisher()
-	}
-
-	public static func postDetails(id: Int) -> AnyPublisher<Post, Error> {
-		self.provider.run(.post(id: id), decoder: decoder)
-	}
-
-	public static func userDetails(id: String) -> AnyPublisher<User, Error> {
-		self.provider.run(.user(id: id), decoder: decoder)
-	}
 }
