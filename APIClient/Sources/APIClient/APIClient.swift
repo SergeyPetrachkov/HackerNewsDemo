@@ -19,9 +19,9 @@ public enum API {
   }
 
   public static func userDetails(id: String, completion: @escaping (Result<User, Error>) -> Void) {
-	self.provider.request(.user(id: id)) { result in
-	  completion(result)
-	}
+    self.provider.request(.user(id: id)) { result in
+      completion(result)
+    }
   }
 }
 
@@ -35,6 +35,6 @@ public enum FlatAPI {
   }
 
   public static func getUserDetails(id: String) throws -> User {
-	return try Networking.requestData(id, functor: API.userDetails)
+    return try Networking.requestData(id, functor: API.userDetails)
   }
 }
