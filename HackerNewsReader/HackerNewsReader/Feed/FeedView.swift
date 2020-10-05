@@ -26,9 +26,7 @@ struct FeedView: View {
         NavigationView() {
           List(jobs, id: \.id) { item in
             VStack(alignment: .leading) {
-              Text("\(item.id)")
-                .font(.headline)
-              //          Text(item.text ?? "no text")
+              PostView(id: item.id)
             }
           }
           .navigationBarTitle(Text("Job posts"))
