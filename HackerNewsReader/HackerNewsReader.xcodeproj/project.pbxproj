@@ -8,22 +8,24 @@
 
 /* Begin PBXBuildFile section */
 		5C2DB2BC252B123D00E85477 /* HackerNewsReaderApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C2DB2BB252B123D00E85477 /* HackerNewsReaderApp.swift */; };
-		5C2DB2BE252B123D00E85477 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C2DB2BD252B123D00E85477 /* ContentView.swift */; };
+		5C2DB2BE252B123D00E85477 /* FeedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C2DB2BD252B123D00E85477 /* FeedView.swift */; };
 		5C2DB2C0252B123F00E85477 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5C2DB2BF252B123F00E85477 /* Assets.xcassets */; };
 		5C2DB2C3252B123F00E85477 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5C2DB2C2252B123F00E85477 /* Preview Assets.xcassets */; };
 		5C4DEB7D252B23F7006C9C1B /* ModernClient in Frameworks */ = {isa = PBXBuildFile; productRef = 5C4DEB7C252B23F7006C9C1B /* ModernClient */; };
 		5C4DEB80252B240B006C9C1B /* NetworkingCore in Frameworks */ = {isa = PBXBuildFile; productRef = 5C4DEB7F252B240B006C9C1B /* NetworkingCore */; };
 		5C4DEB82252B240F006C9C1B /* Entities in Frameworks */ = {isa = PBXBuildFile; productRef = 5C4DEB81252B240F006C9C1B /* Entities */; };
+		A5125712252B634300067CFF /* FeedViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5125711252B634300067CFF /* FeedViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		5C2DB2B8252B123D00E85477 /* HackerNewsReader.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HackerNewsReader.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5C2DB2BB252B123D00E85477 /* HackerNewsReaderApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HackerNewsReaderApp.swift; sourceTree = "<group>"; };
-		5C2DB2BD252B123D00E85477 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		5C2DB2BD252B123D00E85477 /* FeedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedView.swift; sourceTree = "<group>"; };
 		5C2DB2BF252B123F00E85477 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		5C2DB2C2252B123F00E85477 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		5C2DB2C4252B123F00E85477 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5C4DEB76252B1DE1006C9C1B /* APIClient */ = {isa = PBXFileReference; lastKnownFileType = folder; name = APIClient; path = ../APIClient; sourceTree = "<group>"; };
+		A5125711252B634300067CFF /* FeedViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,8 +63,8 @@
 		5C2DB2BA252B123D00E85477 /* HackerNewsReader */ = {
 			isa = PBXGroup;
 			children = (
+				A512570F252B630700067CFF /* Feed */,
 				5C2DB2BB252B123D00E85477 /* HackerNewsReaderApp.swift */,
-				5C2DB2BD252B123D00E85477 /* ContentView.swift */,
 				5C2DB2BF252B123F00E85477 /* Assets.xcassets */,
 				5C2DB2C4252B123F00E85477 /* Info.plist */,
 				5C2DB2C1252B123F00E85477 /* Preview Content */,
@@ -83,6 +85,15 @@
 			children = (
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		A512570F252B630700067CFF /* Feed */ = {
+			isa = PBXGroup;
+			children = (
+				5C2DB2BD252B123D00E85477 /* FeedView.swift */,
+				A5125711252B634300067CFF /* FeedViewModel.swift */,
+			);
+			path = Feed;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -159,8 +170,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5C2DB2BE252B123D00E85477 /* ContentView.swift in Sources */,
+				5C2DB2BE252B123D00E85477 /* FeedView.swift in Sources */,
 				5C2DB2BC252B123D00E85477 /* HackerNewsReaderApp.swift in Sources */,
+				A5125712252B634300067CFF /* FeedViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
