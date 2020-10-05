@@ -15,4 +15,5 @@ public struct Post: Codable {
   public let by: String
   public let title: String
   public let text: String?
+  public let url: String?
 }

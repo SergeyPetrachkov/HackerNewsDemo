@@ -13,6 +13,10 @@ extension APIEndpoint {
   static func post(id: Int) -> APIEndpoint {
     return .init(path: basePath + "item/\(id).json?print=pretty", method: .get)
   }
+
+  static func user(id: String) -> APIEndpoint {
+	return .init(path: basePath + "user/\(id).json?print=pretty")
+  }
 }
 
 public enum API {
@@ -30,6 +34,12 @@ public enum API {
       completion(result)
     }
   }
+
+  public static func userDetails(id: String, completion: @escaping (Result<User, Error>) -> Void) {
+	self.provider.request(.user(id: id)) { result in
+	  completion(result)
+	}
+  }
 }
 
 public enum FlatAPI {
@@ -40,4 +50,9 @@ public enum FlatAPI {
   public static func getJobDetails(id: Int) throws -> Post {
     return try Networking.requestData(id, functor: API.postDetails)
   }
+
+  public static func getUserDetails(id: String) throws -> User {
+	return try Networking.requestData(id, functor: API.userDetails)
+  }
+}
 }
