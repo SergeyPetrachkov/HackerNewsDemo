@@ -1,5 +1,5 @@
 //
-//  PostView.swift
+//  JobRow.swift
 //  HackerNewsReader
 //
 //  Created by sergey on 05.10.2020.
@@ -19,12 +19,27 @@ struct JobRow: View {
     self.viewModel = PostViewModel(id: id)
   }
 
+  private func placeholder() -> AnyView {
+    return AnyView (
+      VStack(alignment: .leading, spacing: 4) {
+        Text("                                                ")
+          .font(.body)
+          .background(Color.gray.opacity(0.6))
+          .cornerRadius(5)
+        Text("                ")
+          .font(.system(size: 11, weight: .light))
+          .background(Color.gray.opacity(0.6))
+          .cornerRadius(5)
+      }
+    )
+  }
+
   private func render() -> AnyView {
     switch self.viewModel.state {
     case .initial:
-      return AnyView(ProgressView().onAppear(perform: self.loadData).onAppear(perform: self.loadData))
+      return AnyView(self.placeholder().onAppear(perform: self.loadData))
     case .isLoading:
-      return AnyView(ProgressView())
+      return self.placeholder()
     case .loaded(let post):
       return AnyView (
         VStack(alignment: .leading, spacing: 4) {

@@ -15,8 +15,11 @@
 		5C4DEB80252B240B006C9C1B /* NetworkingCore in Frameworks */ = {isa = PBXBuildFile; productRef = 5C4DEB7F252B240B006C9C1B /* NetworkingCore */; };
 		5C4DEB82252B240F006C9C1B /* Entities in Frameworks */ = {isa = PBXBuildFile; productRef = 5C4DEB81252B240F006C9C1B /* Entities */; };
 		A5125712252B634300067CFF /* FeedViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5125711252B634300067CFF /* FeedViewModel.swift */; };
-		A5125716252B654100067CFF /* PostView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5125715252B654100067CFF /* PostView.swift */; };
+		A5125716252B654100067CFF /* JobRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5125715252B654100067CFF /* JobRow.swift */; };
 		A512571A252B656500067CFF /* PostViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5125719252B656500067CFF /* PostViewModel.swift */; };
+		A534BFA2252C52D40044F58C /* JobDetailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A534BFA1252C52D40044F58C /* JobDetailsView.swift */; };
+		A534BFA6252C53B10044F58C /* UserViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A534BFA5252C53B10044F58C /* UserViewModel.swift */; };
+		A534BFA9252C53B80044F58C /* UserView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A534BFA8252C53B80044F58C /* UserView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,8 +31,11 @@
 		5C2DB2C4252B123F00E85477 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5C4DEB76252B1DE1006C9C1B /* APIClient */ = {isa = PBXFileReference; lastKnownFileType = folder; name = APIClient; path = ../APIClient; sourceTree = "<group>"; };
 		A5125711252B634300067CFF /* FeedViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedViewModel.swift; sourceTree = "<group>"; };
-		A5125715252B654100067CFF /* PostView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostView.swift; sourceTree = "<group>"; };
+		A5125715252B654100067CFF /* JobRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JobRow.swift; sourceTree = "<group>"; };
 		A5125719252B656500067CFF /* PostViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostViewModel.swift; sourceTree = "<group>"; };
+		A534BFA1252C52D40044F58C /* JobDetailsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JobDetailsView.swift; sourceTree = "<group>"; };
+		A534BFA5252C53B10044F58C /* UserViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserViewModel.swift; sourceTree = "<group>"; };
+		A534BFA8252C53B80044F58C /* UserView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -67,6 +73,7 @@
 		5C2DB2BA252B123D00E85477 /* HackerNewsReader */ = {
 			isa = PBXGroup;
 			children = (
+				A534BFA4252C53A50044F58C /* User */,
 				A5125714252B653400067CFF /* Post */,
 				A512570F252B630700067CFF /* Feed */,
 				5C2DB2BB252B123D00E85477 /* HackerNewsReaderApp.swift */,
@@ -104,10 +111,20 @@
 		A5125714252B653400067CFF /* Post */ = {
 			isa = PBXGroup;
 			children = (
-				A5125715252B654100067CFF /* PostView.swift */,
+				A5125715252B654100067CFF /* JobRow.swift */,
 				A5125719252B656500067CFF /* PostViewModel.swift */,
+				A534BFA1252C52D40044F58C /* JobDetailsView.swift */,
 			);
 			path = Post;
+			sourceTree = "<group>";
+		};
+		A534BFA4252C53A50044F58C /* User */ = {
+			isa = PBXGroup;
+			children = (
+				A534BFA5252C53B10044F58C /* UserViewModel.swift */,
+				A534BFA8252C53B80044F58C /* UserView.swift */,
+			);
+			path = User;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -187,7 +204,10 @@
 				A512571A252B656500067CFF /* PostViewModel.swift in Sources */,
 				5C2DB2BE252B123D00E85477 /* FeedView.swift in Sources */,
 				5C2DB2BC252B123D00E85477 /* HackerNewsReaderApp.swift in Sources */,
-				A5125716252B654100067CFF /* PostView.swift in Sources */,
+				A534BFA9252C53B80044F58C /* UserView.swift in Sources */,
+				A534BFA2252C52D40044F58C /* JobDetailsView.swift in Sources */,
+				A5125716252B654100067CFF /* JobRow.swift in Sources */,
+				A534BFA6252C53B10044F58C /* UserViewModel.swift in Sources */,
 				A5125712252B634300067CFF /* FeedViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -25,9 +25,11 @@ struct FeedView: View {
       return AnyView (
         NavigationView() {
           List(jobs, id: \.id) { item in
-            VStack(alignment: .leading) {
-              PostView(id: item.id)
-            }
+            NavigationLink(
+              destination: JobDetailsView(id: item.id)
+            ) {
+                JobRow(id: item.id)
+              }
           }
           .navigationBarTitle(Text("Job posts"))
         }
