@@ -1,6 +1,6 @@
 ## HackerNewsReader
 
-To run swift ui client open `./HackerNewsDemo/HackerNewsReader/HackerNewsReader.xcodeproj`
+To run swift ui client open `./HackerNewsReader/HackerNewsReader.xcodeproj`
 
 ## Core
 
